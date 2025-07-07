@@ -1,0 +1,21 @@
+[
+  {
+    "index" : "0",
+    "nom": "France – Lily",
+    "coord": [48.8566, 2.3522],
+    "lien": "https://www.youtube.com/watch?v=urVfi9Yswaw&ab_channel=PierrePerret",
+    "audio": "audio/lily.mp3"
+  },
+  {
+    "index" : "1",
+    "nom": "USA – Shenandoah",
+    "coord": [38.8977, -77.0365],
+    "lien": "https://www.youtube.com/watch?v=YhBZzG5rAO8"
+  },
+  {
+    "index" : "2",
+    "nom": "Afrique du Sud – Siyahamba",
+    "coord": [-29.0, 24.0],
+    "lien": "https://www.youtube.com/watch?v=9tHEZZ0QfW0"
+  }
+]
