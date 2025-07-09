@@ -1,72 +1,79 @@
-<!--Ouvrir powershell dans le repertoire puis executer "python -m http.serve"-->
-<!DOCTYPE html>
+<!--Ouvrir powershell dans le repertoire puis executer "python -m http.server"-->
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chorale des Jeunes</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <img src="logo.png" alt="Logo Chorale" class="logo">
-    <h1>Chorale des Jeunes</h1>
-    <p>Un été en harmonie 🎶</p>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cicada Choeur Etudiant</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="logo.png" alt="Logo Chorale" class="logo" />
+      <h1>Cicada Choeur Etudiant</h1>
+      <p>Un été en harmonie 🎶</p>
+    </header>
 
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="#a-propos">À propos</a>
-    <a href="#programme">Programme</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="#a-propos">À propos</a>
+      <a href="#programme">Programme</a>
+      <a href="#galerie">Photos</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-  <main>
-    <section id="a-propos">
-      <h2>À propos</h2>
-      <p>
-        La Chorale des Jeunes est un projet musical ouvert à tous les jeunes motivés par le chant choral.
-        Répétitions conviviales, répertoire varié, concerts en fin d'été… Rejoins-nous !
-      </p>
-    </section>
+    <main>
+      <section id="a-propos">
+        <h2>À propos</h2>
+        <p>
+          Cicada Choeur Etudiant est un projet musical ouvert à tous les jeunes
+          motivés par le chant choral. Répétitions conviviales, répertoire
+          varié, concerts en fin d'année… Rejoins-nous !
+        </p>
+      </section>
 
-    <section id="galerie">
-      <h2>Photos</h2>
-      <div class="galerie">
-        <img src="photo1.jpg" alt="Répétition 1">
-        <img src="photo2.jpg" alt="Répétition 2">
-        <img src="photo3.jpg" alt="Concert">
-      </div>
-    </section>
+      <section id="programme">
+        <h2>Programme de l'année</h2>
+        <p>Clique sur un pays pour découvrir le morceau associé :</p>
+        <iframe
+          src="map.html"
+          width="100%"
+          height="500px"
+          title="Carte interactive"
+        ></iframe>
+      </section>
 
-    <section id="programme">
-      <h2>Programme de l'année</h2>
-      <p>Clique sur un pays pour découvrir le morceau associé :</p>
-      <iframe src="map.html" width="100%" height="500px" title="Carte interactive"></iframe>
-    </section>
+      <section id="galerie">
+        <h2>Photos</h2>
+        <div class="galerie">
+          <img src="photo1.jpg" alt="Répétition 1" />
+          <img src="photo2.jpg" alt="Répétition 2" />
+          <img src="photo3.jpg" alt="Concert" />
+        </div>
+      </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <form action="https://formspree.io/f/xovwrbnk" method="POST">
-        <label for="name">Nom :</label>
-        <input type="text" id="name" name="name" required>
+      <section id="contact">
+        <h2>Contact</h2>
+        <form action="https://formspree.io/f/xovwrbnk" method="POST">
+          <label for="name">Nom :</label>
+          <input type="text" id="name" name="name" required />
 
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required>
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="email" required />
 
-        <label for="message">Message :</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+          <label for="message">Message :</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
 
-        <!-- Champ honeypot -->
-        <input type="text" name="_gotcha" style="display:none">
+          <!-- Champ honeypot -->
+          <input type="text" name="_gotcha" style="display: none" />
 
-        <button type="submit">Envoyer</button>
-      </form>
-    </section>
-  </main>
+          <button type="submit">Envoyer</button>
+        </form>
+      </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Chorale des Jeunes - Tous droits réservés</p>
-  </footer>
-</body>
+    <footer>
+      <p>&copy; 2025 Chorale des Jeunes - Tous droits réservés</p>
+    </footer>
+  </body>
 </html>
