@@ -1,66 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Carte des morceaux</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  />
-  <style>
-    html, body {
-      margin: 0;
-      height: 100%;
-    }
-    #map {
-      width: 100%;
-      height: 100%;
-    }
-  </style>
-</head>
-<body>
-  <div id="map"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Carte des morceaux</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+      }
+      #map {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script>
-  const map = L.map('map', {
-  center: [20, 0],
-  zoom: 2,
-  minZoom: 2,
-  maxZoom: 4,
-  maxBounds: [[-60, -180], [85, 180]],
-  maxBoundsViscosity: 1.0
-});
-
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap',
-    maxZoom: 18
-  }).addTo(map);
-
-   // Chargement du fichier JSON
-  fetch('morceaux.json')
-    .then(response => response.json())
-    .then(data => {
-    data.forEach(morceau => {
-      const popupContent = `
-        <strong>${morceau.nom}</strong><br>
-        <audio id="audio-${morceau.index}" controls>
-          <source src="${morceau.audio}" type="audio/mpeg">
-          Votre navigateur ne supporte pas l’audio.
-        </audio>`;
-      
-      L.marker(morceau.coord)
-        .addTo(map)
-        .bindPopup(popupContent)
-        .on('popupopen', () => {
-            const audio = document.getElementById(`audio-${morceau.index}`);
-            if (audio) audio.volume = 0.5;
-        });
-    })})
-    .catch(error => {
-      console.error('Erreur :', error);
-    });
-</script>
-</body>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="map.js"></script>
+  </body>
 </html>

@@ -7,7 +7,7 @@
 
 /* Corps de page */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   background-color: #fdfdfd;
   color: #333;
   line-height: 1.6;
@@ -15,7 +15,7 @@ body {
 
 /* En-tête */
 header {
-  background-color: #6c63ff;
+  background-color: #b45e34;
   color: white;
   text-align: center;
   padding: 2rem 1rem;
@@ -50,7 +50,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #6c63ff;
+  color: #b45e34;
 }
 
 /* Contenu principal */
@@ -65,7 +65,7 @@ section {
 }
 
 h2 {
-  color: #6c63ff;
+  color: #b45e34;
   margin-bottom: 1rem;
 }
 
@@ -104,7 +104,7 @@ form textarea {
 }
 
 form button {
-  background-color: #6c63ff;
+  background-color: #b45e34;
   color: white;
   padding: 0.8rem;
   border: none;
@@ -114,7 +114,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #554bce;
+  background-color: #b45e34;
 }
 
 /* Pied de page */
