@@ -68,6 +68,12 @@ h2 {
   color: #b45e34;
   margin-bottom: 1rem;
 }
+h3 {
+  color: #b45e34;
+  margin-bottom: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+}
 
 /* Galerie photos */
 .galerie {
@@ -124,6 +130,14 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+footer a:hover {
+  color: #d63384; /* rose Instagram */
 }
 
 /* Responsive */

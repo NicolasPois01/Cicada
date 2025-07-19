@@ -42,7 +42,7 @@ fetch("morceaux.json")
     data.forEach((morceau) => {
       const popupContent = `
         <strong>${morceau.titre} - ${morceau.langue}</strong><br>
-        <audio id="audio-${morceau.index}" controls>
+        <audio id="audio-${morceau.index}" controls style="margin:1rem;">
           <source src="${morceau.audio}" type="audio/mpeg">
           Votre navigateur ne supporte pas l’audio.
         </audio><br>
