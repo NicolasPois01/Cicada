@@ -15,16 +15,16 @@ body {
 
 /* En-tête */
 header {
-  background-color: #b45e34;
+  background-color: #C6724E;
   color: white;
   text-align: center;
-  padding: 2rem 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 header .logo {
-  width: 80px;
+  width: 500px;
   height: auto;
-  margin-bottom: 1rem;
 }
 
 header h1 {
@@ -39,11 +39,15 @@ header p {
 nav {
   background-color: #eee;
   text-align: center;
-  padding: 0.5rem;
+  padding-bottom: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #C6724E
 }
 
 nav a {
-  color: #333;
+  color: white;
   text-decoration: none;
   margin: 0 1rem;
   font-weight: bold;
@@ -55,7 +59,7 @@ nav a:hover {
 
 /* Contenu principal */
 main {
-  padding: 2rem 1rem;
+  padding: 2rem 0.5rem;
   max-width: 1000px;
   margin: auto;
 }
@@ -65,11 +69,11 @@ section {
 }
 
 h2 {
-  color: #b45e34;
+  color: #C6724E;
   margin-bottom: 1rem;
 }
 h3 {
-  color: #b45e34;
+  color: black;
   margin-bottom: 1rem;
   text-align: center;
   margin-top: 1rem;
@@ -82,13 +86,24 @@ h3 {
   gap: 1rem;
   justify-content: center;
 }
+.galerie a {
+  display: block;
+  width: 30%;
+}
+
 
 .galerie img {
-  width: 30%;
+  width: 100%;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galerie img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Formulaire */
@@ -98,6 +113,7 @@ form {
   gap: 1rem;
   max-width: 500px;
   margin: auto;
+  margin-top: 1rem;
 }
 
 form input,
@@ -152,7 +168,6 @@ footer a:hover {
 
   nav a {
     display: inline-block;
-    margin: 0.5rem;
   }
 }
 
