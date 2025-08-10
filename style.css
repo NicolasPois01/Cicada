@@ -23,7 +23,7 @@ header {
 }
 
 header .logo {
-  width: 500px;
+  max-width: 50%;
   height: auto;
 }
 
@@ -66,6 +66,28 @@ main {
 
 section {
   margin-bottom: 2.5rem;
+}
+
+.cta-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: #C6724E;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-btn:hover {
+  background-color: #b45e34;
+  transform: scale(1.03);
 }
 
 h2 {
@@ -172,9 +194,23 @@ footer a:hover {
 }
 
 @media (max-width: 480px) {
-  .galerie img {
-    width: 100%;
-  }
+  .galerie {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;       /* s'assurer que la galerie occupe toute la largeur */
+      gap: 1rem 0;       /* écart vertical seulement */
+    }
+
+    .galerie a {
+      width: 75%;       /* lien englobe toute la largeur */
+    }
+
+    .galerie img {
+      width: 100% !important;
+      max-width: 100%;
+      height: auto;
+      display: block;    /* éviter espace blanc sous l'image */
+    }
 
   form {
     width: 100%;
